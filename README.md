@@ -188,3 +188,54 @@ Interpret model performance in plain English
 Understand how feature selection affects machine learning model performance
 Connect data preprocessing and exploratory analysis with regression model development
 
+
+## Week 3 – Model Evaluation & Tuning
+
+### Task 1: Model Evaluation & Tuning — Beyond Accuracy
+
+In this task, I revisited my **Titanic Classification Model** from Week 2 and evaluated its performance using multiple classification metrics instead of relying only on accuracy.
+
+### Objectives
+
+* Evaluate the baseline Logistic Regression model using **Accuracy, Precision, Recall, and F1-Score**.
+* Use `classification_report` from `sklearn.metrics` for detailed model evaluation.
+* Understand why accuracy can be misleading, particularly when dealing with imbalanced datasets.
+* Apply **GridSearchCV** for systematic hyperparameter tuning.
+* Tune two Logistic Regression hyperparameters:
+
+  * `C`
+  * `solver`
+* Use **5-fold cross-validation** and F1-score as the optimization metric.
+* Compare the original and tuned models using a **Before vs After** performance table.
+
+### Baseline Model Results
+
+The original Logistic Regression model achieved:
+
+* **Accuracy:** 80%
+* **Class 0 F1-Score:** 0.85
+* **Class 1 F1-Score:** 0.72
+* **Class 1 Recall:** 0.67
+
+These results demonstrated why accuracy alone is not sufficient for evaluating a classification model.
+
+### Key Learning
+
+This task helped me understand the importance of **Precision, Recall, and F1-Score** when evaluating classification models. I also learned how `GridSearchCV` can systematically test different hyperparameter combinations instead of relying on manual trial and error.
+
+Hyperparameter tuning was used to investigate whether the Logistic Regression model could achieve better classification performance, providing practical experience with model optimization and evaluation.
+
+### Tools & Technologies
+
+* Python
+* Pandas
+* NumPy
+* Scikit-learn
+* Matplotlib
+* Seaborn
+* Jupyter Notebook / Google Colab
+* GitHub
+
+### Notebook
+
+`Week-03/Week_03_Task_01_Model_Evaluation_Tuning.ipynb`
