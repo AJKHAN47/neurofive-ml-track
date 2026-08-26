@@ -239,3 +239,73 @@ Hyperparameter tuning was used to investigate whether the Logistic Regression mo
 ### Notebook
 
 `Week-03/Week_03_Task_01_Model_Evaluation_Tuning.ipynb`
+
+
+### Task 2: Customer Churn Prediction — Working with a Business Problem
+
+Built a machine learning solution to predict customer churn using the **Telco Customer Churn** dataset. This task focused on applying machine learning to a real-world business problem and translating model results into actionable business insights.
+
+#### Objectives
+
+- Performed exploratory data analysis (EDA) to understand customer churn patterns.
+- Analyzed the relationship between churn and features such as contract type, tenure, monthly charges, internet service, and payment method.
+- Identified and handled missing values, including converting `TotalCharges` into a numerical format.
+- Examined class imbalance in the `Churn` target variable.
+- Encoded categorical variables using **One-Hot Encoding**.
+- Used stratified train-test splitting to preserve the churn distribution.
+- Trained and evaluated two classification models:
+  - **Logistic Regression**
+  - **Decision Tree Classifier**
+- Evaluated the models using:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-Score
+  - Confusion Matrix
+- Compared the performance of both models.
+- Used Decision Tree `feature_importances_` to identify the **top 3 features driving customer churn**.
+- Created a business-focused summary explaining the findings and their potential impact on customer retention.
+
+#### Machine Learning Workflow
+
+1. Data Loading
+2. Data Cleaning
+3. Exploratory Data Analysis
+4. Class Imbalance Analysis
+5. Categorical Feature Encoding
+6. Feature Scaling
+7. Train-Test Split
+8. Logistic Regression
+9. Decision Tree Classification
+10. Model Evaluation & Comparison
+11. Feature Importance Analysis
+12. Business Insights
+
+#### Dataset
+
+**Telco Customer Churn Dataset**
+
+The dataset contains customer demographic information, services, contract details, billing information, tenure, and churn status.
+
+Target variable:
+
+- `Churn` — whether the customer left the company (`Yes`/`No`)
+
+#### Models Used
+
+| Model | Purpose |
+|---|---|
+| Logistic Regression | Baseline/interpretable classification model |
+| Decision Tree Classifier | Interpretable tree-based classification model |
+
+#### Evaluation Metrics
+
+Because the dataset contains more non-churned customers than churned customers, accuracy alone is not sufficient for evaluating the models. Therefore, Precision, Recall, and F1-Score were also considered when comparing model performance.
+
+#### Key Business Objective
+
+The primary business objective is to identify customers who are at higher risk of leaving the telecom company. Understanding the factors associated with churn can help businesses develop targeted retention strategies, improve customer satisfaction, and reduce customer loss.
+
+#### Notebook
+
+[Week 3 Task 2 — Customer Churn Prediction](Week-03/Week_03_Task_02_Customer_Churn_Prediction.ipynb)
