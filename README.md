@@ -309,3 +309,60 @@ The primary business objective is to identify customers who are at higher risk o
 #### Notebook
 
 [Week 3 Task 2 — Customer Churn Prediction](Week-03/Week_03_Task_02_Customer_Churn_Prediction.ipynb)
+
+
+
+### Week 4 – Task 1: ML Pipeline & Feature Engineering
+
+#### Task: Build a Proper ML Pipeline with Feature Engineering
+
+In Week 4 Task 1, I built a professional Machine Learning pipeline using the **Titanic dataset** and Scikit-learn.
+
+#### Key Tasks Completed
+
+* Built an end-to-end ML pipeline using `Pipeline` and `ColumnTransformer`
+* Applied `StandardScaler` to numerical features
+* Applied `OneHotEncoder` to categorical features
+* Used `SimpleImputer` to handle missing values
+* Created two engineered features:
+
+  * `FamilySize` = `SibSp + Parch + 1`
+  * `IsAlone` = Indicates whether a passenger was traveling alone
+* Trained a Logistic Regression classification model
+* Evaluated the model using:
+
+  * Accuracy
+  * Precision
+  * Recall
+  * F1 Score
+  * Confusion Matrix
+* Compared the baseline model with the feature-engineered model
+* Saved the final trained pipeline using `joblib`
+* Loaded and tested the saved pipeline to verify consistent predictions
+
+#### Machine Learning Pipeline
+
+```text
+Raw Data
+   ↓
+Train/Test Split
+   ↓
+ColumnTransformer
+   ├── Numerical Features → Imputation → StandardScaler
+   │
+   └── Categorical Features → Imputation → OneHotEncoder
+   ↓
+Logistic Regression
+   ↓
+Predictions & Evaluation
+```
+
+#### Files
+
+* `Week-04/Week_04_Task_01_ML_Pipeline_Feature_Engineering.ipynb` – Complete Google Colab notebook
+* `Week-04/train.csv` – Titanic training dataset
+* `Week-04/titanic_final_pipeline.joblib` – Saved final ML pipeline
+
+#### Key Learning Outcomes
+
+This task helped me understand how Scikit-learn Pipelines can combine preprocessing and model training into a single reusable workflow. I also learned how feature engineering can be tested systematically and how pipelines help maintain consistent preprocessing while reducing the risk of data leakage.
