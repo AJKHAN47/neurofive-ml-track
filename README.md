@@ -366,3 +366,54 @@ Predictions & Evaluation
 #### Key Learning Outcomes
 
 This task helped me understand how Scikit-learn Pipelines can combine preprocessing and model training into a single reusable workflow. I also learned how feature engineering can be tested systematically and how pipelines help maintain consistent preprocessing while reducing the risk of data leakage.
+
+
+## Week 4 – Ensemble Learning
+
+### Task 2: Random Forest vs XGBoost
+
+In this task, I explored **Ensemble Learning** by comparing Random Forest and XGBoost with the previously implemented Logistic Regression model using the Titanic dataset.
+
+### Models Used
+
+* Logistic Regression — baseline single model
+* Random Forest Classifier — ensemble learning using multiple decision trees
+* XGBoost Classifier — gradient boosting ensemble method
+
+### Model Performance
+
+| Model               |   Accuracy |  Precision |     Recall |   F1 Score |
+| ------------------- | ---------: | ---------: | ---------: | ---------: |
+| Logistic Regression |     80.45% |     79.31% |     66.67% |     72.44% |
+| **Random Forest**   | **81.56%** | **81.03%** | **68.12%** | **74.02%** |
+| XGBoost             |     79.33% |     79.63% |     62.32% |     69.92% |
+
+### Results
+
+Random Forest achieved the best overall performance among the three models, with an **81.56% accuracy** and **74.02% F1-score**. It slightly outperformed Logistic Regression across all evaluated metrics. XGBoost achieved 79.33% accuracy and a 69.92% F1-score, performing below both Random Forest and Logistic Regression on this dataset. This demonstrates that ensemble methods do not always guarantee better performance, as model performance depends on the dataset, preprocessing, and model configuration.
+
+### Feature Importance
+
+Feature importance plots were generated for both **Random Forest** and **XGBoost** to identify which features contributed most to the Titanic survival predictions.
+
+* Random Forest feature importance was analyzed using `feature_importances_`.
+* XGBoost feature importance was analyzed using `feature_importances_`.
+* The importance rankings were compared to understand how the two ensemble methods prioritize different passenger characteristics.
+
+### Random Forest vs XGBoost
+
+Random Forest builds multiple decision trees independently and combines their predictions through voting for classification. XGBoost builds trees sequentially, with each new tree attempting to correct errors made by previous trees. Random Forest mainly reduces variance by averaging multiple trees, while XGBoost uses boosting to progressively improve predictions. Both methods can capture nonlinear relationships that may be difficult for a single Logistic Regression model to learn.
+
+### Key Learning Outcomes
+
+* Learned how ensemble learning combines multiple models to improve predictions.
+* Implemented Random Forest and XGBoost classifiers.
+* Compared ensemble models with a Logistic Regression baseline.
+* Evaluated models using Accuracy, Precision, Recall, and F1-score.
+* Visualized and compared feature importance.
+* Learned that a more complex ensemble model does not necessarily perform better on every dataset.
+
+### Notebook
+
+`Week-04/Week_04_Task_02_Ensemble_Learning.ipynb`
+
