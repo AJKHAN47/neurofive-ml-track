@@ -417,3 +417,45 @@ Random Forest builds multiple decision trees independently and combines their pr
 
 `Week-04/Week_04_Task_02_Ensemble_Learning.ipynb`
 
+
+
+
+### Week 5 – Machine Learning Fundamentals
+
+#### Task 1: Handling Imbalanced & Messy Real-World Data
+
+**Objective:**  
+Understand the challenges of highly imbalanced real-world datasets and apply appropriate techniques to improve classification performance on the minority class.
+
+**Dataset:**  
+Credit Card Fraud Detection dataset from Kaggle.
+
+**Work Completed:**
+- Loaded and explored the Credit Card Fraud Detection dataset
+- Inspected dataset structure, data types, and missing values
+- Identified and handled missing values in the dataset
+- Analyzed the distribution of legitimate and fraudulent transactions
+- Visualized the severe class imbalance using a bar chart
+- Split the dataset into training and testing sets using stratified sampling
+- Applied feature scaling using `StandardScaler`
+- Built a baseline Logistic Regression classification model
+- Evaluated the baseline model using:
+  - Accuracy
+  - Precision
+  - Recall
+  - F1-score
+- Applied **SMOTE (Synthetic Minority Over-sampling Technique)** to the training data
+- Retrained the Logistic Regression model using the balanced training dataset
+- Compared baseline and SMOTE model performance
+- Created confusion matrices to analyze classification errors
+- Explained why accuracy can be misleading for highly imbalanced datasets
+
+**Imbalance Handling Technique:**  
+SMOTE was applied only to the training dataset to prevent data leakage and preserve the original distribution of the unseen test data.
+
+**Key Learning:**  
+In highly imbalanced classification problems such as fraud detection, accuracy alone can provide a misleading picture of model performance. Precision, Recall, and F1-score provide more meaningful insights into how effectively the model identifies the minority fraud class.
+
+**Notebook:**  
+`Week-05/Week_05_Task_01_Imbalanced_Data.ipynb`
+
