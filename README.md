@@ -506,3 +506,11 @@ Week-05/
     ├── requirements.txt
     └── model/
         └── titanic_model.joblib
+
+
+
+### 🚀 Live Demo
+
+The Machine Learning model has been successfully deployed as an interactive web application using Streamlit.
+
+**🌐 Live App:** https://week5-task2-model-deploy-titanic-prediction.streamlit.app/
