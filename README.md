@@ -459,3 +459,50 @@ In highly imbalanced classification problems such as fraud detection, accuracy a
 **Notebook:**  
 `Week-05/Week_05_Task_01_Imbalanced_Data.ipynb`
 
+
+
+### Week 5 – Task 2: Deploy Your Model as a Live Web App
+
+#### Titanic Survival Predictor – Streamlit Deployment
+
+In this task, I deployed my previously trained and tuned Machine Learning model as an interactive web application using Streamlit.
+
+**Project Highlights:**
+
+- Selected the best-performing Titanic classification model from previous tasks
+- Saved the trained model using `joblib`
+- Built an interactive web application using Streamlit
+- Added user input fields for passenger information
+- Implemented real-time survival prediction functionality
+- Loaded the trained Machine Learning model inside the Streamlit application
+- Applied the same feature preprocessing used during model training
+- Tested the application locally before deployment
+- Prepared the project for cloud deployment using `requirements.txt`
+
+**Input Features:**
+
+- Passenger Class
+- Sex
+- Age
+- Number of Siblings/Spouses Aboard
+- Number of Parents/Children Aboard
+- Fare
+- Port of Embarkation
+
+**Technologies Used:**
+
+- Python
+- Scikit-learn
+- Pandas
+- Joblib
+- Streamlit
+
+#### Project Structure
+
+```text
+Week-05/
+└── Week_05_Task_02_Model_Deployment/
+    ├── app.py
+    ├── requirements.txt
+    └── model/
+        └── titanic_model.joblib
